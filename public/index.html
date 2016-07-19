@@ -110,10 +110,10 @@
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-repeat="show in vm.shows">
             <div class="divider"></div>
             <div class="icon-block">
-              <h2 class id="title col s12 center">{{show.title}}</h2> <br/>
+              <h2 class id="title col s12 center">{{show.title}}</h2><br/><br/><br/><br/>
               <h4 class="description col s6 push-s3 center">{{show.description}}</h4>
-              <p class="photo col s2 pull-s6 left" ng-bind-html="show.formatted_datetime | addBreaks"></p>
-              <p class="show col s2 pull-s1 right">{{show.facebook_rsvp_url}}</p>
+              <h2 class="show col s2 pull-s6 left" ng-bind-html="show.formatted_datetime | addBreaks"></h2>
+              <p class="thumb col s2 pull-s1 right"> <img src="{{show.artists[0].thumb_url}}" alt=""></p>
             </div>
           </div>
         </div>

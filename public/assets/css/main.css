@@ -30,12 +30,20 @@ nav .brand-logo {
   min-height: 660px;
 }
 
+h6 {
+  max-height: 200px;
+}
+
 .video {
-  align-content: center;
+  width: 100%;
 }
 
 .photo {
   min-height: 630px
+}
+
+.thumb {
+  max-height: 300px;
 }
 
 .button-collapse {
