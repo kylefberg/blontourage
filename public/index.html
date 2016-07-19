@@ -6,13 +6,16 @@
 
   <title>Blontourage</title>
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/main.css">
   <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="assets/css/main.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script> -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 
 
@@ -41,23 +44,21 @@
   </nav>
 
     <!-- Trying to get the photos to show up in this carousel display but also keeping parallax -->
+
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <!-- <div class="col s12"> -->
-          </div>
-        <!-- </div> -->
+        </div>
       </div>
     </div>
     <div class="parallax-carousel carousel-slider">
-      <!-- <a class="parallax-carousel-item" href="#"><img src="assets/img/bio_cover_photo.jpg"></a> -->
-<!--       <a class="parallax-carousel-item" href="#"><img src="assets/img/ep_tunes_cover.jpg"></a>
       <a class="parallax-carousel-item" href="#"><img src="assets/img/bio_cover_photo.jpg"></a>
-      <a class="parallax-carousel-item" href="#"><img src="assets/img/ep_tunes_cover.jpg"></a> -->
+      <a class="parallax-carousel-item" href="#"><img src="assets/img/ep_tunes_cover.jpg"></a>
+      <a class="parallax-carousel-item" href="#"><img src="assets/img/bio_cover_photo.jpg"></a>
+      <a class="parallax-carousel-item" href="#"><img src="assets/img/ep_tunes_cover.jpg"></a>
     </div>
-      <div class="parallax"><img src="assets/img/bio_cover_photo.jpg" alt="Unsplashed background img 2"></div>
-    </div>
+  </div>
 
     <!-- Second Nav Bar -->
     <nav class="black" role="navigation">
@@ -78,7 +79,7 @@
     </nav>
 
     <section ng-controller="BlontourageController as vm">
-      <strong>{{title}}</strong>
+      <strong ng-repeat= >{{title}}</strong>
       <strong>{{date}}</strong>
       <strong>{{location}}</strong>
       <strong>{{img}}</strong>
@@ -129,7 +130,7 @@
           </div>
         </div>
       </div>
-      <div class="parallax"><img src="" alt="Unsplashed background img 2"></div>
+      <div class="parallax"><video src="<blockquote class="imgur-embed-pub" lang="en" data-id="lPirlIn"><a href="//imgur.com/lPirlIn">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>" alt="Unsplashed background img 2"></div>
     </div>
 
     <div class="container">
@@ -155,6 +156,9 @@
       </div>
       <div class="parallax"><img src="" alt="Unsplashed background img 3"></div>
     </div>
+
+
+
 
     <footer class="page-footer teal">
       <div class="container">
