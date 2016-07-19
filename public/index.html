@@ -15,7 +15,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-sanitize.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
   <script src="../assets/js/main.js"></script>
 
@@ -104,15 +103,17 @@
   </div>
 
 <!-- This is the content from bands in town API that shows upcoming shows -->
-  <div class="container">
+  <h1 class="cols12 center">Come See Us!</h1>
+    <div class="container">
       <div class="section">
-        <div class="row">
+        <div class="row center">
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-repeat="show in vm.shows">
+            <div class="divider"></div>
             <div class="icon-block">
-              <h2 class="left brown-text"><i class="material-icons">flash_on</i></h2>
-              <h5 class="center">{{show.title}}</h5>
-              <p class="right">{{show.description}}</p>
-              <p class="right" ng-bind-html="show.formatted_datetime | addBreaks"></p>
+              <h2 class id="title col s12 center">{{show.title}}</h2> <br/>
+              <h4 class="description col s6 push-s3 center">{{show.description}}</h4>
+              <p class="photo col s2 pull-s6 left" ng-bind-html="show.formatted_datetime | addBreaks"></p>
+              <p class="show col s2 pull-s1 right">{{show.facebook_rsvp_url}}</p>
             </div>
           </div>
         </div>
