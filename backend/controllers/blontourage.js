@@ -1,14 +1,13 @@
 // Require resource's model(s).
 var User = require("../models/user");
+var request = require('request');
 
 var index = function(req, res, next){
-  User.find({}, function(err, users) {
-    if (err) {
-      res.json({message: err});
-    } else {
-      res.json({users: users});
-    }
+  var url = 'http://api.bandsintown.com/artists/blontourage/events.json?api_version=2.0&app_id=blontourage';
+  request(url, function(error, resp, body){
+    res.json(body);
   });
+
 };
 
 var show = function(req, res, next){

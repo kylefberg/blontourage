@@ -1,6 +1,7 @@
-// (function(){
-//   'use strict';
+(function(){
+  'use strict';
 
-//   angular.module("blontourage", []);
-// })();
+  angular.module("blontourage", ['ngSanitize']);
+
+})();
 

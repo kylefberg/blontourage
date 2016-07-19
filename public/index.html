@@ -11,7 +11,8 @@
   <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="assets/css/main.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-sanitize.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
@@ -21,7 +22,7 @@
 
 </head>
 <!-- Top Nav Bar with links to social media -->
-<body ng-controller="MainController as vm">
+<body ng-controller="BlontourageController as vm">
   <div class="navbar">
     <nav class="pink" role="navigation">
       <div class="nav-wrapper container">
@@ -58,14 +59,14 @@
           </div>
         </li>
         <li class="photo">
-          <img src="assets/img/bio_cover_photo.jpg"> <!-- random image -->
+          <img src="assets/img/bio_cover_photo.jpg">
           <div class="caption left-align">
             <h3></h3>
             <h5 class="light grey-text text-lighten-3"></h5>
           </div>
         </li>
         <li class="photo">
-          <img src="assets/img/show_banner.jpg"> <!-- random image -->
+          <img src="assets/img/show_banner.jpg">
           <div class="caption center-align">
             <h3></h3>
             <h5 class="light grey-text text-lighten-3"></h5>
@@ -84,7 +85,7 @@
 
     <!-- Second Nav Bar -->
   <div class id="navbar-float">
-    <nav class="black" role="navigation">
+    <nav class="pink" role="navigation">
       <div class="nav-wrapper container">
         <ul class="right hide-on-med-and-down">
           <li><a href="#">Shows</a></li>
@@ -106,34 +107,12 @@
   <div class="container">
       <div class="section">
         <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-repeat="show in vm.shows">
             <div class="icon-block">
-              <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-              <h5 class="center">Section 1 for sweet sweet data for shows from bands in town</h5>
-              <p class="light">Section 1 for sweet sweet data for shows from bands in town</p>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="icon-block">
-              <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-              <h5 class="center">Section 2 for sweet sweet data for shows from bands in town</h5>
-              <p class="light">Section 2 for sweet sweet data for shows from bands in town</p>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="icon-block">
-              <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-              <h5 class="center">Section 3 for sweet sweet data for shows from bands in town</h5>
-              <p class="light">Section 3 for sweet sweet data for shows from bands in town</p>
-              <section ng-controller="BlontourageController as vm">
-              </section>
-            </div>
-          </div>
-           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="icon-block">
-              <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-              <h5 class="center">Section 4 for sweet sweet data for shows from bands in town</h5>
-              <p class="light">Section 4 for sweet sweet data for shows from bands in town</p>
+              <h2 class="left brown-text"><i class="material-icons">flash_on</i></h2>
+              <h5 class="center">{{show.title}}</h5>
+              <p class="right">{{show.description}}</p>
+              <p class="right" ng-bind-html="show.formatted_datetime | addBreaks"></p>
             </div>
           </div>
         </div>
@@ -151,33 +130,23 @@
       <div class="parallax"><img src="assets/img/bio_cover_photo.jpg" alt="Unsplashed background img 3"></div>
     </div>
 
-
-        <!--   Icon Section   -->
-
-    <div class="container">
-      <div class="section">
-        <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="video"><img src="assets/img/giphy.gif">
+      <div class="container">
+        <div class="section">
+          <h1>Music & Merch</h1>
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
             <div class="icon-block">
               <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-              <h5 class="center">Section for sweet sweet data for shows from bands in town</h5>
-              <p class="light">We did most of the heavy lifting </p>
+              <h5 class="center">Music section split into two sides</h5>
+              <p class="light">Music section split into two sides</p>
             </div>
           </div>
 
-          <div class="col s12 m4">
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
             <div class="icon-block">
               <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-              <h5 class="center">User Experience Focused</h5>
-              <p class="light">By utilizing elements and principles of</p>
-            </div>
-          </div>
-
-          <div class="col s12 m4">
-            <div class="icon-block">
-              <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-              <h5 class="center">Easy to work with</h5>
-              <p class="light">We have provided detailed </p>
+              <h5 class="center">Merch section split into two sides</h5>
+              <p class="light">Merch section split into two sides</p>
             </div>
           </div>
         </div>
@@ -188,11 +157,11 @@
       <div class="section no-pad-bot">
         <div class="container">
           <div class="row center">
-            <h5 class="header col-xs-12 col-sm-12 col-md-12 col-lg-12 light">A modern responsive front-end framework based on Material Design</h5>
+            <h5 class="header col-xs-12 col-sm-12 col-md-12 col-lg-12 light"></h5>
           </div>
         </div>
       </div>
-      <div class="parallax"><video src="<blockquote class="imgur-embed-pub" lang="en" data-id="lPirlIn"><a href="//imgur.com/lPirlIn">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>" alt="Unsplashed background img 2"></div>
+      <div class="parallax"><img src="assets/img/ep_tunes_cover.jpg"></div>
     </div>
 
     <div class="container">
@@ -200,62 +169,46 @@
         <div class="row">
           <div class="col s12 center">
             <h3><i class="mdi-content-send brown-text"></i></h3>
-            <h4>Contact Us</h4>
+            <h1>Connect with us!</h1>
             <p class="left-align light">Lorem ipsum dolor sit amet, </p>
           </div>
         </div>
       </div>
     </div>
 
-
-    <div class="parallax-container valign-wrapper">
-      <div class="section no-pad-bot">
-        <div class="container">
-          <div class="row center">
-            <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-          </div>
-        </div>
-      </div>
-      <div class="parallax"><img src="" alt="Unsplashed background img 3"></div>
-    </div>
-
-
-
-
     <footer class="page-footer pink">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h5 class="white-text">Company Bio</h5>
-            <p class="grey-text text-lighten-4">We are a team of college students </p>
-          </div>
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h5 class="white-text">Settings</h5>
-            <ul>
-              <li><a class="white-text" href="#!">Link 1</a></li>
-              <li><a class="white-text" href="#!">Link 2</a></li>
-              <li><a class="white-text" href="#!">Link 3</a></li>
-              <li><a class="white-text" href="#!">Link 4</a></li>
-            </ul>
-          </div>
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h5 class="white-text">Connect</h5>
-            <ul>
-              <li><a class="white-text" href="#!">Link 1</a></li>
-              <li><a class="white-text" href="#!">Link 2</a></li>
-              <li><a class="white-text" href="#!">Link 3</a></li>
-              <li><a class="white-text" href="#!">Link 4</a></li>
-            </ul>
-          </div>
-        </div>
+      <div class="navbar">
+    <nav class="pink" role="navigation">
+      <div class="nav-wrapper container">
+        <img id="logo-blontourage" src="assets/img/blontouragelogo.png" alt="">
+          <ul id="nav-logos" class="right hide-on-med-and-down">
+            <a target="_blank" class="white-text" href="https://www.facebook.com/BlontourageTrio/"><img src="assets/img/facebook_logo_transparent_background.png" alt=""></a>
+            <a target="_blank" class="white-text" href="https://www.instagram.com/blontourage_trio/"><img src="assets/img/instagram_logo.png" alt=""></a>
+            <a target="_blank" class="white-text" href="https://twitter.com/KaraStephens1"><img src="assets/img/twitter_Logo.png" alt=""></a>
+            <a target="_blank" class="white-text" href="https://youtube.com/channel/UCFvlNfYMFBi5QrH9xQxgaAw"><img src="assets/img/youTube.png" alt=""></a>
+            <a target="_blank" class="white-text" href="https://itunes.apple.com/us/album/california-country-ep/id1014211384?app=itunes&ign-mpt=uo%3D4"><img src="assets/img/itunes_logo.png" alt=""></a>
+          </ul>
+        <!-- Mobile Nav Bar -->
+          <ul id="nav-mobile" class="side-nav">
+            <a target="_blank" class="white-text" href="https://www.facebook.com/BlontourageTrio/"><img src="assets/img/facebook_logo_transparent_background.png" alt=""></a>
+            <a target="_blank" class="white-text" href="https://www.instagram.com/blontourage_trio/"><img src="assets/img/instagram_logo.png" alt=""></a>
+            <a target="_blank" class="white-text" href="https://twitter.com/KaraStephens1"><img src="assets/img/twitter_Logo.png" alt=""></a>
+            <a target="_blank" class="white-text" href="https://youtube.com/channel/UCFvlNfYMFBi5QrH9xQxgaAw"><img src="assets/img/youTube.png" alt=""></a>
+            <a target="_blank" class="white-text" href="https://itunes.apple.com/us/album/california-country-ep/id1014211384?app=itunes&ign-mpt=uo%3D4"><img src="assets/img/itunes_logo.png" alt=""></a>
+          </ul>
+          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
       </div>
+    </nav>
+  </div>
       <div class="footer-copyright">
         <div class="container">
-        Made by <a class="brown-text text-lighten-3" href="http://kylefirstenberg.com">Kyle Firstenberg</a
+        <a class="brown-text text-lighten-3" href="http://kylefirstenberg.com">Made by Kyle Firstenberg</a
         </div>
       </div>
     </footer>
 <!-- angular scripts  -->
 <script src="/app.module.js"></script>
+<script src="controllers/blontourage_controller.js"></script>
+<script src="filters/add_breaks.js"></script>
 </body>
 </html>
