@@ -7,7 +7,9 @@ a { color: #00B7FF; }
 nav ul a,
 nav .brand-logo {
   color: #444;
+  min-height: 0px;
 }
+
 
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
@@ -25,8 +27,12 @@ nav .brand-logo {
     top: 0;
   }
 }
-.slids {
-  height: 800px;
+.slider {
+  min-height: 650px;
+}
+
+.photo {
+  min-height: 600px
 }
 
 .button-collapse {

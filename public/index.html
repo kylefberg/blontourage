@@ -48,94 +48,42 @@
 
   <div class="slider">
     <ul class="slides">
-      <li>
-        <img src="assets/img/ep_tunes_cover.jpg"> <!-- random image -->
-        <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      <li class="photo">
+        <a target="_blank" class="white-text" href="https://itunes.apple.com/us/album/california-country-ep/id1014211384?app=itunes&ign-mpt=uo%3D4"><img src="assets/img/ep_tunes_cover.jpg" alt=""></a>
+
+        <div class="caption left-align">
+          <h3></h3>
+          <h5 class="light grey-text text-lighten-3"></h5>
         </div>
       </li>
-      <li>
+      <li class="photo">
         <img src="assets/img/bio_cover_photo.jpg"> <!-- random image -->
         <div class="caption left-align">
-          <h3>Left Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+          <h3></h3>
+          <h5 class="light grey-text text-lighten-3"></h5>
         </div>
       </li>
-      <li>
+      <li class="photo">
         <img src="assets/img/ep_tunes_cover.jpg"> <!-- random image -->
         <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+          <h3></h3>
+          <h5 class="light grey-text text-lighten-3"></h5>
         </div>
       </li>
-      <li>
+      <li class="photo">
         <img src="assets/img/bio_cover_photo.jpg">
-        <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        <div class="caption right-align">
+          <h3></h3>
+          <h5 class="light grey-text text-lighten-3"></h5>
         </div>
       </li>
     </ul>
   </div>
 
-  <div class="container">
-      <div class="section">
-
-        <!--   Icon Section   -->
-        <div class="row">
-          <div class="col s12 m4">
-            <div class="icon-block">
-              <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-              <h5 class="center">Speeds up development</h5>
-
-              <p class="light">We did most of the heavy lifting </p>
-            </div>
-          </div>
-
-          <div class="col s12 m4">
-            <div class="icon-block">
-              <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-              <h5 class="center">User Experience Focused</h5>
-
-              <p class="light">By utilizing elements and principles of</p>
-            </div>
-          </div>
-
-          <div class="col s12 m4">
-            <div class="icon-block">
-              <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-              <h5 class="center">Easy to work with</h5>
-
-              <p class="light">We have provided detailed </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Trying to get the photos to show up in this carousel display but also keeping parallax -->
-
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-        </div>
-      </div>
-    </div>
-    <div class="parallax-carousel carousel-slider">
-      <!-- <a class="parallax-carousel-item" href="#"><img src="assets/img/bio_cover_photo.jpg"></a> -->
-      <!-- <a class="parallax-carousel-item" href="#"><img src="assets/img/ep_tunes_cover.jpg"></a> -->
-      <!-- <a class="parallax" href="#"><img src="assets/img/bio_cover_photo.jpg"></a> -->
-      <a class="parallax" href="#"><img src="assets/img/ep_tunes_cover.jpg"></
-    </div>
-  </div>
-  <br />
-    <!-- Second Nav Bar -->
   <div class="navbar-float">
     <nav class="black" role="navigation">
       <div class="nav-wrapper container">
-        <ul class="center hide-on-med-and-down">
+        <ul class="right hide-on-med-and-down">
           <li><a href="#">Shows</a></li>
           <li><a href="#">Music</a></li>
           <li><a href="#">Contact</a></li>
@@ -150,6 +98,50 @@
       </div>
     </nav>
   </div>
+
+  <div class="container">
+      <div class="section">
+        <div class="row">
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+              <h5 class="center">Speeds up development</h5>
+
+              <p class="light">We did most of the heavy lifting </p>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+              <h5 class="center">User Experience Focused</h5>
+
+              <p class="light">By utilizing elements and principles of</p>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+              <h5 class="center">Easy to work with</h5>
+              <p class="light">We have provided detailed </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trying to get the photos to show up in this carousel display but also keeping parallax -->
+
+    <div class="parallax-container valign-wrapper">
+      <div class="section no-pad-bot">
+        <div class="container">
+          <div class="row center">
+            <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+          </div>
+        </div>
+      </div>
+      <div class="parallax"><img src="assets/img/bio_cover_photo.jpg" alt="Unsplashed background img 3"></div>
+    </div>
+    <!-- Second Nav Bar -->
 
     <section ng-controller="BlontourageController as vm">
       <strong ng-repeat= >{{title}}</strong>
