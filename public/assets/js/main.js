@@ -1,1 +1,5 @@
-console.log('JS loaded!');
+   $(document).ready(function(){
+      $('.slider').slider({full_width: true});
+      $('.parallax').parallax();
+    });
+
