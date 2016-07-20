@@ -46,12 +46,19 @@ h6 {
   background-repeat: no-repeat;
 }
 
+.contactbackground {
+  background-image: url(../img/blackvelvet.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
 .photo {
   min-height: 630px
 }
 
 .thumb {
   max-height: 150px;
+  border-radius: 20px;
 }
 
 .button-collapse {

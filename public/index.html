@@ -27,11 +27,11 @@
       <div class="nav-wrapper container fixed">
         <img id="logo-blontourage" src="assets/img/blontouragelogo.png" alt="">
           <ul id="nav-logos" class="right hide-on-med-and-down">
-            <a target="_blank" class="white-text" href="https://www.facebook.com/BlontourageTrio/"><img src="assets/img/facebook_logo_transparent_background.png" alt=""></a>
-            <a target="_blank" class="white-text" href="https://www.instagram.com/blontourage_trio/"><img src="assets/img/instagram_logo.png" alt=""></a>
-            <a target="_blank" class="white-text" href="https://twitter.com/KaraStephens1"><img src="assets/img/twitter_Logo.png" alt=""></a>
-            <a target="_blank" class="white-text" href="https://youtube.com/channel/UCFvlNfYMFBi5QrH9xQxgaAw"><img src="assets/img/youTube.png" alt=""></a>
-            <a target="_blank" class="white-text" href="https://itunes.apple.com/us/album/california-country-ep/id1014211384?app=itunes&ign-mpt=uo%3D4"><img src="assets/img/itunes_logo.png" alt=""></a>
+            <a target="_blank" class="white-text" href="https://www.facebook.com/BlontourageTrio/"><img src="assets/img/facebook_logo_transparent_background.png" alt="Facebook"></a>
+            <a target="_blank" class="white-text" href="https://www.instagram.com/blontourage_trio/"><img src="assets/img/instagram_logo.png" alt="Instagram"></a>
+            <a target="_blank" class="white-text" href="https://twitter.com/KaraStephens1"><img src="assets/img/twitter_Logo.png" alt="Twitter"></a>
+            <a target="_blank" class="white-text" href="https://youtube.com/channel/UCFvlNfYMFBi5QrH9xQxgaAw"><img src="assets/img/youTube.png" alt="YouTube"></a>
+            <a target="_blank" class="white-text" href="https://itunes.apple.com/us/album/california-country-ep/id1014211384?app=itunes&ign-mpt=uo%3D4"><img src="assets/img/itunes_logo.png" alt="iTunes"></a>
           </ul>
         <!-- Mobile Nav Bar -->
           <ul id="nav-mobile" class="side-nav">
@@ -87,9 +87,9 @@
     <nav class="pink" role="navigation">
       <div class="nav-wrapper container">
         <ul class="right hide-on-med-and-down">
-          <li><a href="#">Shows</a></li>
-          <li><a href="#">Music</a></li>
-          <li><a href="#">Contact</a></li>
+          <a><img src="assets/img/shows.png"></a>
+          <a><img src="assets/img/music.png"></a>
+          <a><img src="assets/img/contact.png"></a>
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
@@ -112,8 +112,7 @@
               <li class="divider"></li><br/>
               <li class="icon-block">
                 <h3 class id="title col s12 center">{{show.title}}</h3><br/>
-                <a href="{{show.artists[0].facebook_tour_dates_url}}" class="col s2 push-s5 left">More Info</a><br/>
-                <!-- <button type="" class="col s12 center"> class="showcase" link="{{show.artists[0].facebook_tour_dates_url}}"></button> -->
+                <a target="_blank" class="blue-text" href="{{show.artists[0].facebook_tour_dates_url}}" class="col s2 push-s5 left">More Info</a><br/>
                 <h4 class="description col s6 push-s3 center">{{show.description}}</h4>
                 <h4 class="show col s2 pull-s6 left" ng-bind-html="show.formatted_datetime | addBreaks"></h4>
                 <p class="col s2 push-s0 right"> <img class="thumb" src="{{show.artists[0].thumb_url}}" alt=""></p>
@@ -125,61 +124,77 @@
     </div>
 
       <div id="video"><br/>
-        <h1 class="cols12 center">Music & Merch</h1>
+        <h1 class="cols12 center">
+          <a ng-click="vm.music = false">Merch</a>
+          <a ng-click="vm.music = true">Music</a>
+        </h1>
+
         <div class="container">
           <div class="section">
-            <!-- Music side of the screen -->
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-              <div class="icon-block">
-                <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-                <h5 class="center">Music section split into two sides</h5>
-                <br><br><br><br><br><br><br><br><br><br><br><br>
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                <p class="light">Music section split into two sides</p>
-              </div>
-            </div>
-            <!-- Merch side of the screen -->
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-              <div class="icon-block">
-                <div class="col s2 pull-s4">
-                <div class="slider">
-                    <ul class="slides">
-                      <li class="photo">
-                        <a target="_blank" class="white-text" href="https://itunes.apple.com/us/album/california-country-ep/id1014211384?app=itunes&ign-mpt=uo%3D4"><img src="assets/img/ep_tunes_cover.jpg" alt=""></a>
-                        <div class="caption left-align">
-                          <h3></h3>
-                          <h5 class="light grey-text text-lighten-3"></h5>
-                        </div>
-                      </li>
-                      <li class="photo">
-                        <img src="assets/img/bio_cover_photo.jpg">
-                        <div class="caption left-align">
-                          <h3></h3>
-                          <h5 class="light grey-text text-lighten-3"></h5>
-                        </div>
-                      </li>
-                      <li class="photo">
-                        <img src="assets/img/show_banner.jpg">
-                        <div class="caption center-align">
-                          <h3></h3>
-                          <h5 class="light grey-text text-lighten-3"></h5>
-                        </div>
-                      </li>
-                      <li class="photo">
-                        <img src="assets/img/merch_banner.jpg">
-                        <div class="caption right-align">
-                          <h3></h3>
-                          <h5 class="light grey-text text-lighten-3"></h5>
-                        </div>
-                      </li>
-                    </ul>
+          <!-- Merch placement -->
+            <div ng-show="!vm.music">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="icon-block">
+                  <div class=" white-text col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    Avaliable on:
+                  </div>
+                  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
+                  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="slider">
+                      <ul class="slides">
+                        <li class="photo">
+                          <a target="_blank" class="white-text" href="https://itunes.apple.com/us/album/california-country-ep/id1014211384?app=itunes&ign-mpt=uo%3D4"><img src="assets/img/ep_tunes_cover.jpg" alt=""></a>
+                          <div class="caption left-align">
+                            <h3></h3>
+                            <h5 class="light grey-text text-lighten-3"></h5>
+                          </div>
+                        </li>
+                        <li class="photo">
+                          <img src="assets/img/bio_cover_photo.jpg">
+                          <div class="caption left-align">
+                            <h3></h3>
+                            <h5 class="light grey-text text-lighten-3"></h5>
+                          </div>
+                        </li>
+                        <li class="photo">
+                          <img src="assets/img/show_banner.jpg">
+                          <div class="caption center-align">
+                            <h3></h3>
+                            <h5 class="light grey-text text-lighten-3"></h5>
+                          </div>
+                        </li>
+                        <li class="photo">
+                          <img src="assets/img/merch_banner.jpg">
+                          <div class="caption right-align">
+                            <h3></h3>
+                            <h5 class="light grey-text text-lighten-3"></h5>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+            <!-- Music placement -->
+            <div ng-show= "vm.music">
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="icon-block">
+                  <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+                  <h5 class="center">Music section split into two sides</h5>
+                  <br><br><br><br><br><br><br><br><br><br><br><br>
+                  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                  <p class="light">Music section split into two sides</p>
+                </div>
+              </div>
+              <br><br><br><br><br><br><br><br><br><br>
+              <br><br><br><br><br><br><br><br><br><br>
+              <br><br><br><br><br><br><br><br><br><br>
+            </div>
           </div>
         </div>
       </div>
+
 
     <div class="parallax-container valign-wrapper">
       <div class="section no-pad-bot">
@@ -192,17 +207,21 @@
       <div class="parallax"><img src="assets/img/ep_tunes_cover.jpg"></div>
     </div>
 
-    <div class="container">
-      <div class="section">
-        <div class="row">
-          <div class="col s12 center">
-            <h3><i class="mdi-content-send brown-text"></i></h3>
-            <h1>Connect with us!</h1>
-            <p class="left-align light">Lorem ipsum dolor sit amet, </p>
+    <div class="contactbackground">
+      <div class="container">
+        <div class="section">
+          <div class="row">
+            <div class="col s12 center"><br/>
+              <h2><i class="mdi-content-send white-text">Connect with us!</i></h2>
+              <p class="white-text left-align light">Booking us or just want to say Hi?</p>
+                 <br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br><br><br>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    <br/>
 
     <footer class="page-footer pink">
       <div class="footer-copyright">

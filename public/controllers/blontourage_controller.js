@@ -10,6 +10,7 @@
   function BlontourageController($http, $log) {
     var vm = this;
     vm.shows = [];
+    vm.music = false;
 
     $http.get('/api/blontourage').then(function (res) {
       console.log(res);
