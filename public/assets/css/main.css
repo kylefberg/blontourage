@@ -34,8 +34,16 @@ h6 {
   max-height: 200px;
 }
 
-.video {
-  width: 100%;
+#video {
+  background-image: url(../img/giphy.gif);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.showcase {
+  background-image: url(../img/purple_background.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .photo {
@@ -43,7 +51,7 @@ h6 {
 }
 
 .thumb {
-  max-height: 300px;
+  max-height: 150px;
 }
 
 .button-collapse {

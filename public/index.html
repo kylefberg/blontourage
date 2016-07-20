@@ -22,9 +22,9 @@
 </head>
 <!-- Top Nav Bar with links to social media -->
 <body ng-controller="BlontourageController as vm">
-  <div class="navbar">
+  <div class="navbar-fixed">
     <nav class="pink" role="navigation">
-      <div class="nav-wrapper container">
+      <div class="nav-wrapper container fixed">
         <img id="logo-blontourage" src="assets/img/blontouragelogo.png" alt="">
           <ul id="nav-logos" class="right hide-on-med-and-down">
             <a target="_blank" class="white-text" href="https://www.facebook.com/BlontourageTrio/"><img src="assets/img/facebook_logo_transparent_background.png" alt=""></a>
@@ -83,7 +83,7 @@
   </div>
 
     <!-- Second Nav Bar -->
-  <div class id="navbar-float">
+  <div class id="navbar-fixed">
     <nav class="pink" role="navigation">
       <div class="nav-wrapper container">
         <ul class="right hide-on-med-and-down">
@@ -103,56 +103,83 @@
   </div>
 
 <!-- This is the content from bands in town API that shows upcoming shows -->
-  <h1 class="cols12 center">Come See Us!</h1>
-    <div class="container">
-      <div class="section">
-        <div class="row center">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-repeat="show in vm.shows">
-            <div class="divider"></div>
-            <div class="icon-block">
-              <h2 class id="title col s12 center">{{show.title}}</h2><br/><br/><br/><br/>
-              <h4 class="description col s6 push-s3 center">{{show.description}}</h4>
-              <h2 class="show col s2 pull-s6 left" ng-bind-html="show.formatted_datetime | addBreaks"></h2>
-              <p class="thumb col s2 pull-s1 right"> <img src="{{show.artists[0].thumb_url}}" alt=""></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="parallax-container valign-wrapper">
-      <div class="section no-pad-bot">
-        <div class="container">
-          <div class="row center">
-            <h5 class="header col s12 light"></h5>
-          </div>
-        </div>
-      </div>
-      <div class="parallax"><img src="assets/img/bio_cover_photo.jpg" alt="Unsplashed background img 3"></div>
-    </div>
-
-    <div class="video"><img src="assets/img/giphy.gif">
+  <div class="showcase"> <br/>
+    <h1 class="white-text cols12 center">Come See Us!</h1>
       <div class="container">
         <div class="section">
-          <h1>Music & Merch</h1>
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-            <div class="icon-block">
-              <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-              <h5 class="center">Music section split into two sides</h5>
-              <p class="light">Music section split into two sides</p>
-            </div>
-          </div>
-
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-            <div class="icon-block">
-              <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-              <h5 class="center">Merch section split into two sides</h5>
-              <p class="light">Merch section split into two sides</p>
-            </div>
+          <div class="row center">
+            <ul class="white-text col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-repeat="show in vm.shows"> <br/>
+              <li class="divider"></li><br/>
+              <li class="icon-block">
+                <h3 class id="title col s12 center">{{show.title}}</h3><br/>
+                <a href="{{show.artists[0].facebook_tour_dates_url}}" class="col s2 push-s5 left">More Info</a><br/>
+                <!-- <button type="" class="col s12 center"> class="showcase" link="{{show.artists[0].facebook_tour_dates_url}}"></button> -->
+                <h4 class="description col s6 push-s3 center">{{show.description}}</h4>
+                <h4 class="show col s2 pull-s6 left" ng-bind-html="show.formatted_datetime | addBreaks"></h4>
+                <p class="col s2 push-s0 right"> <img class="thumb" src="{{show.artists[0].thumb_url}}" alt=""></p>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
+
+      <div id="video"><br/>
+        <h1 class="cols12 center">Music & Merch</h1>
+        <div class="container">
+          <div class="section">
+            <!-- Music side of the screen -->
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+              <div class="icon-block">
+                <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+                <h5 class="center">Music section split into two sides</h5>
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <p class="light">Music section split into two sides</p>
+              </div>
+            </div>
+            <!-- Merch side of the screen -->
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+              <div class="icon-block">
+                <div class="col s2 pull-s4">
+                <div class="slider">
+                    <ul class="slides">
+                      <li class="photo">
+                        <a target="_blank" class="white-text" href="https://itunes.apple.com/us/album/california-country-ep/id1014211384?app=itunes&ign-mpt=uo%3D4"><img src="assets/img/ep_tunes_cover.jpg" alt=""></a>
+                        <div class="caption left-align">
+                          <h3></h3>
+                          <h5 class="light grey-text text-lighten-3"></h5>
+                        </div>
+                      </li>
+                      <li class="photo">
+                        <img src="assets/img/bio_cover_photo.jpg">
+                        <div class="caption left-align">
+                          <h3></h3>
+                          <h5 class="light grey-text text-lighten-3"></h5>
+                        </div>
+                      </li>
+                      <li class="photo">
+                        <img src="assets/img/show_banner.jpg">
+                        <div class="caption center-align">
+                          <h3></h3>
+                          <h5 class="light grey-text text-lighten-3"></h5>
+                        </div>
+                      </li>
+                      <li class="photo">
+                        <img src="assets/img/merch_banner.jpg">
+                        <div class="caption right-align">
+                          <h3></h3>
+                          <h5 class="light grey-text text-lighten-3"></h5>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <div class="parallax-container valign-wrapper">
       <div class="section no-pad-bot">
@@ -178,29 +205,6 @@
     </div>
 
     <footer class="page-footer pink">
-      <div class="navbar">
-    <nav class="pink" role="navigation">
-      <div class="nav-wrapper container">
-        <img id="logo-blontourage" src="assets/img/blontouragelogo.png" alt="">
-          <ul id="nav-logos" class="right hide-on-med-and-down">
-            <a target="_blank" class="white-text" href="https://www.facebook.com/BlontourageTrio/"><img src="assets/img/facebook_logo_transparent_background.png" alt=""></a>
-            <a target="_blank" class="white-text" href="https://www.instagram.com/blontourage_trio/"><img src="assets/img/instagram_logo.png" alt=""></a>
-            <a target="_blank" class="white-text" href="https://twitter.com/KaraStephens1"><img src="assets/img/twitter_Logo.png" alt=""></a>
-            <a target="_blank" class="white-text" href="https://youtube.com/channel/UCFvlNfYMFBi5QrH9xQxgaAw"><img src="assets/img/youTube.png" alt=""></a>
-            <a target="_blank" class="white-text" href="https://itunes.apple.com/us/album/california-country-ep/id1014211384?app=itunes&ign-mpt=uo%3D4"><img src="assets/img/itunes_logo.png" alt=""></a>
-          </ul>
-        <!-- Mobile Nav Bar -->
-          <ul id="nav-mobile" class="side-nav">
-            <a target="_blank" class="white-text" href="https://www.facebook.com/BlontourageTrio/"><img src="assets/img/facebook_logo_transparent_background.png" alt=""></a>
-            <a target="_blank" class="white-text" href="https://www.instagram.com/blontourage_trio/"><img src="assets/img/instagram_logo.png" alt=""></a>
-            <a target="_blank" class="white-text" href="https://twitter.com/KaraStephens1"><img src="assets/img/twitter_Logo.png" alt=""></a>
-            <a target="_blank" class="white-text" href="https://youtube.com/channel/UCFvlNfYMFBi5QrH9xQxgaAw"><img src="assets/img/youTube.png" alt=""></a>
-            <a target="_blank" class="white-text" href="https://itunes.apple.com/us/album/california-country-ep/id1014211384?app=itunes&ign-mpt=uo%3D4"><img src="assets/img/itunes_logo.png" alt=""></a>
-          </ul>
-          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-      </div>
-    </nav>
-  </div>
       <div class="footer-copyright">
         <div class="container">
         <a class="brown-text text-lighten-3" href="http://kylefirstenberg.com">Made by Kyle Firstenberg</a

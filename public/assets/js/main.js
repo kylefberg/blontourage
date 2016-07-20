@@ -3,3 +3,6 @@
       $('.parallax').parallax();
     });
 
+
+
+
