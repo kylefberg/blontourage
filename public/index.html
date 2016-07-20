@@ -115,7 +115,7 @@
                 <a target="_blank" class="blue-text" href="{{show.artists[0].facebook_tour_dates_url}}" class="col s2 push-s5 left">More Info</a><br/>
                 <h4 class="description col s6 push-s3 center">{{show.description}}</h4>
                 <h4 class="show col s2 pull-s6 left" ng-bind-html="show.formatted_datetime | addBreaks"></h4>
-                <p class="col s2 push-s0 right"> <img class="thumb" src="{{show.artists[0].thumb_url}}" alt=""></p>
+                <p class="col s2 push-s0 right"> <img class="thumb" ng-src="{{show.artists[0].thumb_url}}" alt=""></p>
               </li>
             </ul>
           </div>
