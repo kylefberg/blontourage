@@ -52,6 +52,14 @@ h6 {
   background-repeat: no-repeat;
 }
 
+.maillist {
+  font-size: 20px;
+}
+
+.book {
+  font-size: 40px;
+}
+
 .photo {
   min-height: 630px
 }
