@@ -10,6 +10,23 @@ nav .brand-logo {
   min-height: 0px;
 }
 
+#nav-home {
+  font-size: 20px;
+}
+
+#nav-shows {
+  font-size: 20px;
+}
+
+#nav-music {
+  font-size: 20px;
+}
+
+#nav-connect {
+  font-size: 20px;
+  padding-right: 75px;
+}
+
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
     position: absolute;
@@ -84,6 +101,7 @@ iframe {
 .button-collapse {
   color: #26a69a;
 }
+
 
 .parallax-container {
   min-height: 500px;

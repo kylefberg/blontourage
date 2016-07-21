@@ -30,6 +30,7 @@
           <ul id="nav-logos" class="right hide-on-med-and-down">
             <li><a href="#home" class="scroll.link" data-id="home" id="nav-home">Home</a></li>
             <li><a href="#shows" class="scroll.link" data-id="shows" id="nav-shows">Shows</a></li>
+            <li><a href="#music" class="scroll.link" data-id="music" id="nav-music">Music & Merch</a></li>
             <li><a href="#connect" class="scroll.link" data-id="connect" id="nav-connect">Connect</a></li>
             <a target="_blank" class="white-text" href="https://www.facebook.com/BlontourageTrio/"><img src="assets/img/facebook_logo_transparent_background.png" alt="Facebook"></a>
             <a target="_blank" class="white-text" href="https://www.instagram.com/blontourage_trio/"><img src="assets/img/instagram_logo.png" alt="Instagram"></a>
@@ -41,6 +42,7 @@
           <ul id="nav-mobile" class="side-nav">
             <li><a href="#home" class="scroll.link" data-id="home" id="nav-home">Home</a></li>
             <li><a href="#shows" class="scroll.link" data-id="shows" id="nav-shows">Shows</a></li>
+            <li><a href="#music" class="scroll.link" data-id="music" id="nav-music">Music & Merch</a></li>
             <li><a href="#connect" class="scroll.link" data-id="connect" id="nav-connect">Connect Us</a></li>
             <a target="_blank" class="white-text" href="https://www.facebook.com/BlontourageTrio/"><img src="assets/img/facebook_logo_transparent_background.png" alt=""></a>
             <a target="_blank" class="white-text" href="https://www.instagram.com/blontourage_trio/"><img src="assets/img/instagram_logo.png" alt=""></a>
@@ -125,12 +127,12 @@
     </div>
 
       <div id="video"><br/>
-        <h1 class="cols12 center">
-          <a ng-click="vm.music = false">Music</a>
-          <a ng-click="vm.music = true">Merch</a><br/>
-        </h1>
+        <div id="music" class="container">
+          <h1 class="cols12 center">
+            <a ng-click="vm.music = false">Music</a>
+            <a ng-click="vm.music = true">Merch</a><br/>
+          </h1>
 
-        <div class="container">
           <div class="section">
           <!-- Merch placement -->
             <div ng-show="vm.music">

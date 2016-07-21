@@ -1,8 +1,5 @@
  $(document).ready(function(){
     $('.slider').slider({full_width: true});
-    $('.slider').slider('next');
-    $('.slider').slider('prev');
-    $('.slider').slider('pause');
     $('.carousel').carousel();
     $('.carousel').carousel('next');
     $('.carousel').carousel('next', [3]);
@@ -15,6 +12,7 @@
 // navigation for the elevator function with links
   var homeNav = document.getElementById("nav-home");
   var showsNav = document.getElementById("nav-shows");
+  var musicNav = document.getElementById("nav-music");
   var connectNav = document.getElementById("nav-connect");
 
 
@@ -26,6 +24,11 @@
   new Elevator({
     element: showsNav,
     targetElement: document.querySelector('#shows'),
+  });
+
+  new Elevator({
+    element: musicNav,
+    targetElement: document.querySelector('#music'),
   });
 
   new Elevator({
