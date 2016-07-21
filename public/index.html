@@ -125,52 +125,65 @@
         </div>
       </div>
     </div>
+        <!-- third Nav Bar -->
+    <div class id="navbar-fixed">
+      <nav class="pink" role="navigation">
+        <div id="music" class="nav-wrapper container">
+          <ul class="right hide-on-med-and-down">
+          </ul>
+            <!-- third mobile Nav Bar -->
+          <ul id="nav-mobile" class="side-nav">
+          </ul>
+          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+      </nav>
+    </div>
 
-      <div id="video"><br/>
-        <div id="music" class="container">
-          <h1 class="cols12 center">
-            <a class="black-text" ng-click="vm.music = false">Music</a> |
-            <a class="black-text" ng-click="vm.music = true">Merch</a><br/>
-          </h1>
+    <div id="video"><br/>
+      <div class="container">
+        <h1 class="cols12 center">
+          <a class="black-text" ng-click="vm.music = false">Music</a> |
+          <a class="black-text" ng-click="vm.music = true">Merch</a><br/>
+        </h1>
 
-          <div class="section">
-          <!-- Merch placement -->
-            <div ng-show="vm.music">
-              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="icon-block">
-                  <div class="black-text center col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="available">Available for purchase on:</div><br/>
-                    <a target="_blank" class="bandcamp" href="https://blontourage.bandcamp.com/releases"><img src="assets/img/bandcamp2.png" alt=""></a>
-                  </div>
-                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="carousel">
-                      <a class="carousel-item" href="#one!"><img src="assets/img/cowboy.jpg"></a>
-                      <a class="carousel-item" href="#two!"><img src="assets/img/hat.jpg"></a>
-                      <a class="carousel-item" href="#three!"><img src="assets/img/koozie.jpg"></a>
-                      <a class="carousel-item" href="#four!"><img src="assets/img/sweatshirt.png"></a>
-                      <a class="carousel-item" href="#five!"><img src="assets/img/tank.jpg"></a>
-                      <a class="carousel-item" href="#six!"><img src="assets/img/tubetop.jpg"></a>
-                    </div><br/><br/><br/><br/>
-                  </div>
+        <div class="section">
+        <!-- Merch placement -->
+          <div ng-show="vm.music">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <div class="icon-block">
+                <div class="black-text center col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <div class="available">Available for purchase on:</div><br/>
+                  <a target="_blank" class="bandcamp" href="https://blontourage.bandcamp.com/releases"><img src="assets/img/bandcamp2.png" alt=""></a>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <div class="carousel">
+                    <a class="carousel-item" href="#one!"><img src="assets/img/cowboy.jpg"></a>
+                    <a class="carousel-item" href="#two!"><img src="assets/img/hat.jpg"></a>
+                    <a class="carousel-item" href="#three!"><img src="assets/img/koozie.jpg"></a>
+                    <a class="carousel-item" href="#four!"><img src="assets/img/sweatshirt.png"></a>
+                    <a class="carousel-item" href="#five!"><img src="assets/img/tank.jpg"></a>
+                    <a class="carousel-item" href="#six!"><img src="assets/img/tubetop.jpg"></a>
+                  </div><br/><br/><br/><br/>
                 </div>
               </div>
             </div>
-            <!-- Music placement -->
-            <div ng-show= "!vm.music">
-              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">
-                <iframe name="full" style="width:100%;height:520px;border:0px;" src="//widget.cdbaby.com/f6f086c3-c59b-4f41-a2f2-d89f7356477e/full/dark/transparent"></iframe>
-              </div>
-              <div class="music_ions center">
-                <a target="_blank" class="left" href="https://itunes.apple.com/us/album/california-country-ep/id1014211384?app=itunes&ign-mpt=uo%3D4"><img src="assets/img/available_on_itunes_logo.png" alt=""></a>
-                <a target="_blank" class="center" href="https://blontourage.bandcamp.com/releases"><img src="assets/img/bandcamp.png" alt=""></a>
-                <a target="_blank" class="right" href="http://www.cdbaby.com/cd/blontourage"><img src="assets/img/cdbaby.png" alt=""></a>
-                <br/><br/><br/>
-              </div>
+          </div>
+          <!-- Music placement -->
+          <div ng-show= "!vm.music">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">
+              <iframe name="full" style="width:100%;height:520px;border:0px;" src="//widget.cdbaby.com/f6f086c3-c59b-4f41-a2f2-d89f7356477e/full/dark/transparent"></iframe>
+            </div>
+            <div class="music_ions center">
+              <a target="_blank" class="left" href="https://itunes.apple.com/us/album/california-country-ep/id1014211384?app=itunes&ign-mpt=uo%3D4"><img src="assets/img/available_on_itunes_logo.png" alt=""></a>
+              <a target="_blank" class="center" href="https://blontourage.bandcamp.com/releases"><img src="assets/img/bandcamp.png" alt=""></a>
+              <a target="_blank" class="right" href="http://www.cdbaby.com/cd/blontourage"><img src="assets/img/cdbaby.png" alt=""></a>
+              <br/><br/><br/>
             </div>
           </div>
         </div>
       </div>
     </div>
+
 
     <div id="band_photo_parallax" class="parallax-container valign-wrapper">
       <div class="section no-pad-bot">
