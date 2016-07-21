@@ -4,6 +4,8 @@ body {
 
 a { color: #00B7FF; }
 
+/*Nav Bar*/
+
 nav ul a,
 nav .brand-logo {
   color: #444;
@@ -27,6 +29,22 @@ nav .brand-logo {
   padding-right: 75px;
 }
 
+.slider {
+  min-height: 660px;
+}
+
+/*Parallax*/
+
+.parallax-container {
+  min-height: 500px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+.parallax-container .section {
+    width: 100%;
+  }
+
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
     position: absolute;
@@ -43,8 +61,9 @@ nav .brand-logo {
     top: 0;
   }
 }
-.slider {
-  min-height: 660px;
+
+#band_photo_parallax {
+  min-height: 800px;
 }
 
 h6 {
@@ -57,9 +76,6 @@ h6 {
   background-repeat: no-repeat;
 }
 
-#band_photo_parallax {
-  min-height: 800px;
-}
 .showcase {
   background-image: url(../img/purple_background.png);
   background-size: 100%;
@@ -74,7 +90,6 @@ h6 {
 
 iframe {
   margin-left: 40px;
-
 }
 
 .maillist {
@@ -98,20 +113,13 @@ iframe {
   border-radius: 20px;
 }
 
+.available {
+  font-size: 20px;
+}
+
 .button-collapse {
   color: #26a69a;
 }
-
-
-.parallax-container {
-  min-height: 500px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
-}
-.parallax-container .section {
-    width: 100%;
-  }
 
 .icon-block {
   padding: 0 15px;
