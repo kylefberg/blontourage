@@ -93,7 +93,12 @@ iframe {
 }
 
 .maillist {
-  font-size: 20px;
+  font-size: 25px;
+}
+
+.email {
+  font-size: 20px !important;
+  color: white;
 }
 
 .music_icons {
