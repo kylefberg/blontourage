@@ -40,6 +40,9 @@ h6 {
   background-repeat: no-repeat;
 }
 
+#band_photo_parallax {
+  min-height: 800px;
+}
 .showcase {
   background-image: url(../img/purple_background.png);
   background-size: 100%;
@@ -50,6 +53,11 @@ h6 {
   background-image: url(../img/blackvelvet.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
+}
+
+iframe {
+  margin-left: 40px;
+
 }
 
 .maillist {
