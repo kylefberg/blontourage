@@ -17,16 +17,20 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/elevator.js"></script>
 
 
 </head>
 <!-- Top Nav Bar with links to social media -->
-<body ng-controller="BlontourageController as vm">
+<body id="home" ng-controller="BlontourageController as vm">
   <div class="navbar-fixed">
     <nav class="pink" role="navigation">
       <div class="nav-wrapper container fixed">
         <img id="logo-blontourage" src="assets/img/blontouragelogo.png" alt="">
           <ul id="nav-logos" class="right hide-on-med-and-down">
+            <li><a href="#home" class="scroll.link" data-id="home" id="nav-home">Home</a></li>
+            <li><a href="#shows" class="scroll.link" data-id="shows" id="nav-shows">Shows</a></li>
+            <li><a href="#connect" class="scroll.link" data-id="connect" id="nav-connect">Connect</a></li>
             <a target="_blank" class="white-text" href="https://www.facebook.com/BlontourageTrio/"><img src="assets/img/facebook_logo_transparent_background.png" alt="Facebook"></a>
             <a target="_blank" class="white-text" href="https://www.instagram.com/blontourage_trio/"><img src="assets/img/instagram_logo.png" alt="Instagram"></a>
             <a target="_blank" class="white-text" href="https://twitter.com/KaraStephens1"><img src="assets/img/twitter_Logo.png" alt="Twitter"></a>
@@ -35,6 +39,9 @@
           </ul>
         <!-- Mobile Nav Bar -->
           <ul id="nav-mobile" class="side-nav">
+            <li><a href="#home" class="scroll.link" data-id="home" id="nav-home">Home</a></li>
+            <li><a href="#shows" class="scroll.link" data-id="shows" id="nav-shows">Shows</a></li>
+            <li><a href="#connect" class="scroll.link" data-id="connect" id="nav-connect">Connect Us</a></li>
             <a target="_blank" class="white-text" href="https://www.facebook.com/BlontourageTrio/"><img src="assets/img/facebook_logo_transparent_background.png" alt=""></a>
             <a target="_blank" class="white-text" href="https://www.instagram.com/blontourage_trio/"><img src="assets/img/instagram_logo.png" alt=""></a>
             <a target="_blank" class="white-text" href="https://twitter.com/KaraStephens1"><img src="assets/img/twitter_Logo.png" alt=""></a>
@@ -85,17 +92,11 @@
     <!-- Second Nav Bar -->
   <div class id="navbar-fixed">
     <nav class="pink" role="navigation">
-      <div class="nav-wrapper container">
+      <div id="shows" class="nav-wrapper container">
         <ul class="right hide-on-med-and-down">
-          <a><img src="assets/img/shows.png"></a>
-          <a><img src="assets/img/music.png"></a>
-          <a><img src="assets/img/contact.png"></a>
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
-          <li><a href="#">Shows</a></li>
-          <li><a href="#">Music</a></li>
-          <li><a href="#">Contact</a></li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
       </div>
@@ -177,7 +178,7 @@
       <div class="parallax"><img src="assets/img/band_photo.jpg"></div>
     </div>
 
-    <div class="contactbackground">
+    <div id="connect" class="contactbackground">
       <div class="container">
         <div class="section">
           <div class="row">
