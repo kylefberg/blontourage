@@ -80,6 +80,7 @@ h6 {
   background-image: url(../img/purple_background.png);
   background-size: 100%;
   background-repeat: no-repeat;
+  font-family: lassiter;
 }
 
 .contactbackground {
@@ -90,6 +91,10 @@ h6 {
 
 iframe {
   margin-left: 40px;
+}
+
+.container {
+  font-family: lassiter;
 }
 
 .maillist {
