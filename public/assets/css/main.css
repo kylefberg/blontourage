@@ -77,9 +77,9 @@ h6 {
 }
 
 .showcase {
-  background-image: url(../img/purple_background.png);
+  background-image: url(../img/pink_velvet.jpg);
   background-size: 100%;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   font-family: lassiter;
 }
 
